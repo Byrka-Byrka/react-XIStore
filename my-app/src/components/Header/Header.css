@@ -1,0 +1,34 @@
+.header{
+    background:rgb(27, 26, 26);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header a{
+    text-decoration: none;
+    color: rgb(170, 170, 170);
+}
+.account-info{
+    width:170px;
+    color: rgb(170, 170, 170);
+    display: flex;
+    justify-content: space-around;
+}
+.authorization-button{
+    cursor: pointer;
+}
+.authorization-button:hover{
+    color: white;
+}
+.authorization-button__separator{
+    cursor:default;
+}
+.cartButton{
+    width: 50px;
+    margin-right: 20px;
+}
+.addProductButton{
+    width: 100px;
+    margin-right: 20px;
+}

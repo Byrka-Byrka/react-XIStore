@@ -1,0 +1,75 @@
+.error{
+    color: red;
+    width: 80%;
+}
+.valid{
+    visibility: hidden;
+}
+.inValid{
+    visibility: visible;
+}
+.productToEdit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productToEdit__wrapper{
+    border: gray solid 1px;
+    border-radius: 15px;
+    padding: 15px 0;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.editProduct-input{
+    width: 50%;
+}
+.editProduct__colors{
+    border: gray solid 1px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    margin: 10px 0;
+    width: 100%;
+}
+.colors__delete-button{
+    margin: 10px 0;
+    width: 80%;
+}
+.editProduct__submit{
+    border: none;
+    background-color:rgb(255, 125, 19);
+    width: 30%;
+    font-size: 15px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+.editProduct-buttons__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.editProduct__delete-popup__buttons{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.popUp-link_width{
+    width: 30%;
+}
+@media (max-width: 400px) {
+    .error{
+        font-size: 12px;
+    }
+}

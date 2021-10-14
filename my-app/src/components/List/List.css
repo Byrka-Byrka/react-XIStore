@@ -1,0 +1,17 @@
+.category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.category__header{
+    width:90%;
+}
+.category__listItemsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    min-width: 350px;
+    max-width: 1000px;
+    justify-content: start;
+
+}

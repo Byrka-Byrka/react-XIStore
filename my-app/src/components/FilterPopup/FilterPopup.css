@@ -1,0 +1,64 @@
+.filterOverlay{
+    position: fixed;
+    overflow: hidden;
+    top: 40px;
+    width: 100%;
+    height: 140px;
+    background-color: gray; 
+    display: flex;
+    justify-content:flex-end;
+    visibility: hidden;
+}
+.filterForm{
+    display: flex;
+    justify-content:flex-end;
+}
+.filter_active{
+    visibility: visible;
+}
+.filter {
+    margin: 0 20px 0 0;
+    width: 250px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: white;
+}
+.filter .input_wrapper{
+    justify-content: flex-end;
+}
+.sort_price{
+    display: flex;
+}
+.sort_minPrice{
+    width: 80px;
+}
+.sort_maxPrice{
+    width: 80px;
+}
+.sort_checkboxes{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.search_container{
+    display: flex;
+    justify-content: flex-end;
+}
+.filter_control{
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+
+}
+.filter_close{
+    width: 100%;
+    margin: 3px 0;
+}
+.filter_clear{
+    width: 100%;
+}
