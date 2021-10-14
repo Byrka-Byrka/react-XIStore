@@ -51,7 +51,7 @@ export const LocalStorageSlice = createSlice({
                         GPU: 'Adreno 660',
                         GPUSpeed: 840,
                         flashMemory: 256,
-                        src: 'img/mi11UltraBlack.jpeg',
+                        src: './img/mi11UltraBlack.jpeg',
                         colors: [{
                                 color: 'black',
                                 src: 'https://github.com/Byrka-Byrka/react-XIStore/tree/master/public/img/mi11UltraBlack.jpeg',
