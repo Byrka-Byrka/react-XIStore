@@ -54,12 +54,12 @@ export const LocalStorageSlice = createSlice({
                         src: './img/mi11UltraBlack.jpeg',
                         colors: [{
                                 color: 'black',
-                                src: 'https://github.com/Byrka-Byrka/react-XIStore/tree/master/public/img/mi11UltraBlack.jpeg',
+                                src: '../img/mi11UltraBlack.jpeg',
                                 amount: 5,
                             },
                             {
                                 color: 'white',
-                                src: 'https://github.com/Byrka-Byrka/react-XIStore/tree/master/public/img/mi11UltraWhite.jpeg',
+                                src: '../../img/mi11UltraWhite.jpeg',
                                 amount: 0,
                             },
                         ],
