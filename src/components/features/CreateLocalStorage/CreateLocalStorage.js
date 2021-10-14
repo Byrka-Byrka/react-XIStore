@@ -51,15 +51,15 @@ export const LocalStorageSlice = createSlice({
                         GPU: 'Adreno 660',
                         GPUSpeed: 840,
                         flashMemory: 256,
-                        src: '/img/mi11UltraBlack.jpeg',
+                        src: 'img/mi11UltraBlack.jpeg',
                         colors: [{
                                 color: 'black',
-                                src: '/img/mi11UltraBlack.jpeg',
+                                src: 'img/mi11UltraBlack.jpeg',
                                 amount: 5,
                             },
                             {
                                 color: 'white',
-                                src: '/img/mi11UltraWhite.jpeg',
+                                src: 'img/mi11UltraWhite.jpeg',
                                 amount: 0,
                             },
                         ],
