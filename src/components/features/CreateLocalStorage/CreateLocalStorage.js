@@ -22,17 +22,17 @@ export const LocalStorageSlice = createSlice({
                         src: '/img/Redmi 9A.jpeg',
                         colors: [{
                                 color: 'green',
-                                src: '/img/Redmi 9A.jpeg',
+                                src: 'img/Redmi 9A.jpeg',
                                 amount: 5,
                             },
                             {
                                 color: 'black',
-                                src: '/img/Redmi 9A_black.jpeg',
+                                src: 'img/Redmi 9A_black.jpeg',
                                 amount: 2,
                             },
                             {
                                 color: 'blue',
-                                src: '/img/Redmi 9A_blue.jpeg',
+                                src: 'img/Redmi 9A_blue.jpeg',
                                 amount: 0,
                             },
                         ],
