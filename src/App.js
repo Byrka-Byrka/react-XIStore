@@ -11,15 +11,20 @@ import {
 } from "react-router-dom";
 import { List } from './components/List/List';
 import { useDispatch } from 'react-redux'
-import { createLocalStorage, setTotalAmountOfProducts } from './components/features/CreateLocalStorage/CreateLocalStorage'
+import { createLocalStorage, setTotalAmountOfProducts, createLocalStorageUsers } from './components/features/CreateLocalStorage/CreateLocalStorage'
 import { setProducts } from './components/features/Filter/Filter'
 import { setUsers } from './components/features/singIn/authorizationReducer'
 import { AddProductPage } from './components/addProdutPage/AddProductPage';
 import { CartPage } from './components/CartPage/CartPage';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
 
 const dispatch = useDispatch()
+if(!localStorage.users){
+  
+  dispatch(createLocalStorageUsers())
+}
 if(!localStorage.products){
   
   dispatch(createLocalStorage())
@@ -46,6 +51,7 @@ dispatch(setUsers())
           </Route>
           <Redirect from='' to='/list'/>
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );
