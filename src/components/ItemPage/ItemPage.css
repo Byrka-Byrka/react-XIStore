@@ -25,6 +25,9 @@
     justify-content: space-around;
 
 }
+.itemPage__button{
+    min-width: 85px;
+}
 .itemPage__props-wrapper{
     width: 80%;
     max-width: 800px; 

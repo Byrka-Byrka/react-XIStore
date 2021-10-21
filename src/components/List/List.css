@@ -1,3 +1,6 @@
+.list-wrapper{
+    min-height: 70vh;
+}
 .category{
     display: flex;
     flex-direction: column;
