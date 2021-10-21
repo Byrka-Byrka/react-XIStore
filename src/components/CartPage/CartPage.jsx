@@ -19,13 +19,11 @@ export function CartPage() {
     }
 
     const handleDeleteProduct = (event) => {
-        console.log(event.target.parentElement.id)
         let index = event.target.parentElement.id
         let product = products[index]
         let values = {
             index,
         }
-        console.log(values)
         dispatch(deleteProductFromCart(values))
         dispatch(productAmountDecrement(product))
 
