@@ -48,6 +48,17 @@
     display: flex;
     justify-content: space-around;
 }
+.signUPEmailError{
+    text-align: center;
+    height: 15px;
+    font-size: 14px;
+    color: red;
+    width: 80%;
+    visibility: hidden;
+}
+.invalidEmail{
+    visibility: visible;
+}
 @media (max-width: 650px) {
     .main-container{
         width: 60%;

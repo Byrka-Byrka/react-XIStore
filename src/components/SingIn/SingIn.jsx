@@ -61,7 +61,7 @@ export function SingIn() {
     return (
         <div className={isActiveClassName}>
             <div className='main-container'>
-                <h2>Sing In</h2>
+                <h2>Sign In</h2>
                 <form id='singInForm' onSubmit={handleAuthorization} className='form_wrapper'>
                     <Input value={usernameInput} onInputEvent={handleChangeUsername} type='email' id='email' className='input' placeholder='email address' requiredValue={true} labelValue={<MailOutlineOutlined />} />
                     <Input value={passwordInput} onInputEvent={handleChangePassword} type='password' id='password' className='input' placeholder='password' requiredValue={true} labelValue={<VpnKeyOutlined />} />

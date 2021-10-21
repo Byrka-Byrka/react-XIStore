@@ -9,12 +9,14 @@ export const authorizationSlice = createSlice({
         isUserAuthorized: false,
         isUserAdmin: false,
         signInError: false,
+        signUPError: false,
     },
     reducers:{
         setUsers:(state)=>{
             state.users = JSON.parse(localStorage.users)
         },
         authorization: (state,action) => {
+            state.users = JSON.parse(localStorage.users)
             state.signInError = false;
             let { usernameInput, passwordInput } = action.payload;
             let user = state.users.find(item => item.username === usernameInput)
@@ -34,15 +36,21 @@ export const authorizationSlice = createSlice({
             state.signInError = false;
         },
         registration: (state,action) => {
+            state.users = JSON.parse(localStorage.users)
             let { passwordInput, emailInput } = action.payload;
             let newUsers = JSON.parse(localStorage.users)
-            
-            newUsers.push({
-                    email: emailInput,
+            let user = state.users.find(item => item.username === emailInput)
+            if (!user) {
+                state.signUPError = false;
+                newUsers.push({
+                    username: emailInput,
                     password: passwordInput,
                     isAdmin: false,
             })
-            localStorage.users = JSON.stringify(state.users)
+            } else {
+                state.signUPError = true;
+            }
+            localStorage.users = JSON.stringify(newUsers)
         },
         handleChangeUsername: (state, action) => {state.usernameInp = action.payload}
     }
