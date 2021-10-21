@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# This project is deployed on gh-pages
+https://byrka-byrka.github.io/react-XIStore/
+Open [https://byrka-byrka.github.io/react-XIStore/](https://byrka-byrka.github.io/react-XIStore/) to view it in the browser.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
