@@ -1,5 +1,4 @@
 # This project is deployed on gh-pages
-https://byrka-byrka.github.io/react-XIStore/
 Open [https://byrka-byrka.github.io/react-XIStore/](https://byrka-byrka.github.io/react-XIStore/) to view it in the browser.
 
 ## Getting Started with Create React App
