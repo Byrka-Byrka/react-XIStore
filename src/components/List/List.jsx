@@ -10,27 +10,6 @@ import { EditProductPage } from '../EditProductPage/EditProductPage'
 
 
 export function List(props) {
-
-    // const users = [
-    //     {
-    //         username: 'user@mail',
-    //         password: 'user',
-    //         isAdmin: false,
-    //     },
-    //     {
-    //         username: 'user1@mail',
-    //         password: 'user1',
-    //         isAdmin: false,
-    //     },
-    //     {
-    //         username: 'admin@mail',
-    //         password: 'admin',
-    //         isAdmin: true,
-    //     },
-    // ];
-    // localStorage.products = JSON.stringify(items)
-    // localStorage.users = JSON.stringify(users)
-    // 
     const dispatch = useDispatch();
     const activateFilter = () => {
         dispatch(changeIsActive())
