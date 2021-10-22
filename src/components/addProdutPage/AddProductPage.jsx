@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 
 
 export function AddProductPage(props) {
-    const [popupActive,setPopupActive]=useState(false)
+    const [popupActive, setPopupActive] = useState(false)
     const dispatch = useDispatch()
     const newProduct = useSelector((state) => state.addProduct.newProduct)
     const screenResolution = useSelector((state) => state.addProduct.screenResolution)
@@ -138,7 +138,7 @@ export function AddProductPage(props) {
         numberOfColors: 'valid',
         validation: false,
     })
-    useEffect(()=>{
+    useEffect(() => {
         if (!Object.values(validationState).includes('inValid') && validationState.validation === true) {
             dispatch(editProductsInLocalStorage(newProduct))
             dispatch(editProducts(newProduct))
@@ -146,7 +146,7 @@ export function AddProductPage(props) {
             dispatch(productReset())
             setPopupActive(true)
         }
-    },[validationState])
+    }, [validationState])
     const handleAddProduct = (event) => {
         event.preventDefault()
         formValidation()
@@ -168,59 +168,59 @@ export function AddProductPage(props) {
                     </div>
                     <Input value={newProduct.product.name} type='text' id='name' className='input addProduct-input' placeholder='product name' requiredValue={false} labelValue='Name' />
                     <div className={`error ${validationState.name}`}>
-                        имя должно начинаться с заглавной буквы
+                        Name must start with a capital letter
                     </div>
                     <Input value={newProduct.product.date} type='text' id='date' className='input addProduct-input' placeholder='market launch year' requiredValue={false} labelValue='Date' />
                     <div className={`error ${validationState.date}`}>
-                        поле должно содержать год выхода на рынок
+                        The field must contain the year of market entry
                     </div>
                     <Input value={newProduct.product.screen} type='number' id='screen' min='4' max='8' step='0.1' className='input addProduct-input' placeholder='screen inches' requiredValue={false} labelValue='Screen' />
                     <div className={`error ${validationState.screen}`}>
-                        поле должно содержать число от 4 до 8
+                        The field must contain a number from 4 to 8
                     </div>
                     <Input value={screenResolution.screenWidth} type='number' id='screenWidth' min='1' className='input addProduct-input' placeholder='screen width' requiredValue={false} labelValue='Screen width' />
                     <div className={`error ${validationState.screenWidth}`}>
-                        введите ширину экрана в пикселях
+                        Enter screen width in pixels
                     </div>
                     <Input value={screenResolution.screenHeight} type='number' min='1' id='screenHeight' className='input addProduct-input' placeholder='screen height' requiredValue={false} labelValue='Screen height' />
                     <div className={`error ${validationState.screenHeight}`}>
-                        введите высоту экрана в пикселях
+                        Enter screen height in pixels
                     </div>
                     <Input value={newProduct.product.RAM} type='number' min='2' max='64' step={2} id='RAM' className='input addProduct-input' placeholder='RAM (gb)' requiredValue={false} labelValue='RAM' />
                     <div className={`error ${validationState.RAM}`}>
-                        поле должно содержать число кратную 2 больше 2 меньше 64
+                        The field must contain a multiple of 2, greater than 2 less than 64
                     </div>
                     <Input value={newProduct.product.CPU} type='text' id='CPU' className='input addProduct-input' placeholder='CPU name' requiredValue={false} labelValue='CPU' />
                     <div className={`error ${validationState.CPU}`}>
-                        поле должно содержать буквы и быть не менее 5 символов
+                        The field must contain letters and be at least 5 characters
                     </div>
                     <Input value={newProduct.product.CPUClockSpeed} type='number' min='100' max='2000' step='100' id='CPUClockSpeed' className='input addProduct-input' placeholder='CPU clock speed' requiredValue={false} labelValue='CPU clock speed' />
                     <div className={`error ${validationState.CPUClockSpeed}`}>
-                        поле должно содержать только число от 100 до 2000
+                        The field should only contain a number between 100 and 3500
                     </div>
                     <Input value={newProduct.product.cores} type='text' id='cores' className='input addProduct-input' placeholder='number of cores' requiredValue={false} labelValue='Cores' />
                     <div className={`error ${validationState.cores}`}>
-                        поле должно содержать только цифры, до трех цифр кратных 2 через запятую
+                        The field must contain only numbers, up to three digits divisible by 2, separated by commas
                     </div>
                     <Input value={newProduct.product.GPU} type='text' id='GPU' className='input addProduct-input' placeholder='GPU name' requiredValue={false} labelValue='GPU' />
                     <div className={`error ${validationState.GPU}`}>
-                        поле должно содержать буквы и быть не менее 5 символов
+                        The field must contain letters and be at least 5 characters
                     </div>
                     <Input value={newProduct.product.GPUSpeed} type='number' id='GPUSpeed' min='100' max='2000' step='100' className='input addProduct-input' placeholder='GPU speed' requiredValue={false} labelValue='GPU speed' />
                     <div className={`error ${validationState.GPUSpeed}`}>
-                        поле должно содержать только цифры
+                        The field must contain only numbers
                     </div>
                     <Input value={newProduct.product.flashMemory} type='number' min='32' max='512' step={32} id='flashMemory' className='input addProduct-input' placeholder='flash memory (gb)' requiredValue={false} labelValue='Flash memory' />
                     <div className={`error ${validationState.flashMemory}`}>
-                        поле должно содержать число от 32 до 512
+                        The field must contain a number from 32 to 512
                     </div>
                     <Input value={newProduct.product.price} type='number' id='price' min='1' className='input addProduct-input' placeholder='price' requiredValue={false} labelValue='Price' />
                     <div className={`error ${validationState.price}`}>
-                        поле должно содержать целое число
+                        The field must contain an integer
                     </div>
                     <Input type='number' id='numberOfColors' className='input addProduct-input' min='1' placeholder='number of colors' requiredValue={false} labelValue='Colors' />
                     <div className={`error ${validationState.numberOfColors}`}>
-                        поле должно содержать целое число
+                        The field must contain an integer
                     </div>
                 </div>
                 {newProduct.product.colors.map((item, index) => {
@@ -236,11 +236,11 @@ export function AddProductPage(props) {
             </form >
             <PopUp active={popupActive} setActive={setPopupActive}>
                 <h3>
-                    product added successfully 
+                    product added successfully
                 </h3>
-                <Link onClick={()=>setPopupActive(false)} className='popUp-link' to='/list'><div>To main Page</div></Link>
+                <Link onClick={() => setPopupActive(false)} className='popUp-link' to='/list'><div>To main Page</div></Link>
             </PopUp>
-            
+
 
         </div>
     )

@@ -37,15 +37,6 @@ export function EditProductPage(props) {
         price: 'valid',
         numberOfColors: 'valid',
     })
-    // const color = [
-    //     {
-    //         color: 'test',
-    //         src: '',
-    //         amount: null,
-    //     },
-    // ];
-    // let numberOfColors = 0;
-
     const formValidation = (product) => {
         let isValid = {
             category: 'valid',
@@ -143,12 +134,12 @@ export function EditProductPage(props) {
             value: event.target.value
         }
         dispatch(changeColors(valuesToChange))
-        
+
     }
-    useEffect(()=>{
-        
-        if (!Object.values(validationState).includes('inValid')&&validationState.isValidationPassed === true) {
-            
+    useEffect(() => {
+
+        if (!Object.values(validationState).includes('inValid') && validationState.isValidationPassed === true) {
+
             let values = {
                 category: category,
                 initialID: initialID,
@@ -158,14 +149,14 @@ export function EditProductPage(props) {
             dispatch(setProducts())
             setConfirmPopupActive(true)
         }
-    },[validationState])
-    
+    }, [validationState])
+
     const handleChangeProductsArr = (event) => {
         event.preventDefault()
         setValidationState(formValidation())
     }
     const handleDeleteColor = (event) => {
-        
+
         dispatch(deleteColor(event.target.parentElement.parentElement.id))
     }
     const handleAddColor = () => {
@@ -187,55 +178,54 @@ export function EditProductPage(props) {
                 <div className='productToEdit__wrapper' onInput={handleChangeValue}>
                     <Input value={productToEdit.name} type='text' id='name' className='input editProduct-input' placeholder='product name' requiredValue={true} labelValue='Name' />
                     <div className={`error ${validationState.name}`}>
-                        имя должно начинаться с заглавной буквы
+                        Name must start with a capital letter
                     </div>
                     <Input value={productToEdit.date} type='text' id='date' className='input editProduct-input' placeholder='market launch year' requiredValue={true} labelValue='Date' />
                     <div className={`error ${validationState.date}`}>
-                        поле должно содержать год выхода на рынок
+                        The field must contain the year of market entry
                     </div>
                     <Input value={productToEdit.screen} type='text' id='screen' className='input editProduct-input' placeholder='screen inches' requiredValue={true} labelValue='Screen' />
                     <div className={`error ${validationState.screen}`}>
-                        поле должно содержать число от 4 до 8
+                        The field must contain a number from 4 to 8
                     </div>
                     <Input value={screenResolution.screenWidth} type='number' id='screenWidth' className='input editProduct-input' placeholder='screen width' requiredValue={true} labelValue='Screen width' />
                     <div className={`error ${validationState.screenWidth}`}>
-                        введите ширину экрана в пикселях
+                        Enter screen width in pixels
                     </div>
                     <Input value={screenResolution.screenHeight} type='number' id='screenHeight' className='input editProduct-input' placeholder='screen height' requiredValue={true} labelValue='Screen height' />
                     <div className={`error ${validationState.screenHeight}`}>
-                        введите высоту экрана в пикселях
+                        Enter screen height in pixels
                     </div>
                     <Input value={productToEdit.RAM} type='text' id='RAM' className='input editProduct-input' placeholder='RAM (gb)' requiredValue={true} labelValue='RAM' />
                     <div className={`error ${validationState.RAM}`}>
-                        поле должно содержать число кратную 2 больше 2 меньше 64
+                        The field must contain a multiple of 2, greater than 2 less than 64
                     </div>
                     <Input value={productToEdit.CPU} type='text' id='CPU' className='input editProduct-input' placeholder='CPU name' requiredValue={true} labelValue='CPU' />
                     <div className={`error ${validationState.CPU}`}>
-                        поле должно содержать буквы и быть не менее 5 символов
+                        The field must contain letters and be at least 5 characters
                     </div>
                     <Input value={productToEdit.CPUClockSpeed} type='text' id='CPUClockSpeed' className='input editProduct-input' placeholder='CPU clock speed' requiredValue={true} labelValue='CPU clock speed' />
                     <div className={`error ${validationState.CPUClockSpeed}`}>
-                        поле должно содержать только число от 100 до 3500
+                        The field should only contain a number between 100 and 3500
                     </div>
                     <Input value={productToEdit.cores} type='text' id='cores' className='input editProduct-input' placeholder='number of cores' requiredValue={true} labelValue='Cores' />
                     <div className={`error ${validationState.cores}`}>
-                        поле должно содержать только цифры, до трех цифр кратных 2 через запятую
-                    </div>
+                        The field must contain only numbers, up to three digits divisible by 2, separated by commas                    </div>
                     <Input value={productToEdit.GPU} type='text' id='GPU' className='input editProduct-input' placeholder='GPU name' requiredValue={true} labelValue='GPU' />
                     <div className={`error ${validationState.GPU}`}>
-                        поле должно содержать буквы и быть не менее 5 символов
+                        The field must contain letters and be at least 5 characters
                     </div>
                     <Input value={productToEdit.GPUSpeed} type='text' id='GPUSpeed' className='input editProduct-input' placeholder='GPU speed' requiredValue={true} labelValue='GPU speed' />
                     <div className={`error ${validationState.GPUSpeed}`}>
-                        поле должно содержать только цифры
+                        The field must contain only numbers
                     </div>
                     <Input value={productToEdit.flashMemory} type='number' min='32' max='512' step={32} id='flashMemory' className='input editProduct-input' placeholder='flash memory (gb)' requiredValue={true} labelValue='Flash memory' />
                     <div className={`error ${validationState.flashMemory}`}>
-                        поле должно содержать число от 32 до 512
+                        The field must contain a number from 32 to 512
                     </div>
                     <Input value={productToEdit.price} type='number' id='price' className='input editProduct-input' placeholder='price' requiredValue={true} labelValue='Price' />
                     <div className={`error ${validationState.price}`}>
-                        поле должно содержать целое число
+                        The field must contain an integer
                     </div>
                 </div>
                 <Button eventCallback={handleAddColor} value='Add color' />
@@ -258,7 +248,7 @@ export function EditProductPage(props) {
                             Changes saved
                             successfully
                         </h3>
-                        <Button eventCallback={()=>{history.push('/list')}} value='Yes' />
+                        <Button eventCallback={() => { history.push('/list') }} value='Yes' />
                     </PopUp>
                     <Button eventCallback={() => setPopupActive(true)} value='Delete item' />
                     <PopUp active={popupActive} setActive={setPopupActive}>
