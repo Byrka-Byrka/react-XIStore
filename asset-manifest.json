@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-XIStore/static/css/main.f4297ffb.chunk.css",
+    "main.css": "/react-XIStore/static/css/main.1833f958.chunk.css",
     "main.js": "/react-XIStore/static/js/main.d9b4c867.chunk.js",
     "main.js.map": "/react-XIStore/static/js/main.d9b4c867.chunk.js.map",
     "runtime-main.js": "/react-XIStore/static/js/runtime-main.d1324cf2.js",
@@ -10,13 +10,13 @@
     "static/js/3.8e39f6c2.chunk.js": "/react-XIStore/static/js/3.8e39f6c2.chunk.js",
     "static/js/3.8e39f6c2.chunk.js.map": "/react-XIStore/static/js/3.8e39f6c2.chunk.js.map",
     "index.html": "/react-XIStore/index.html",
-    "static/css/main.f4297ffb.chunk.css.map": "/react-XIStore/static/css/main.f4297ffb.chunk.css.map",
+    "static/css/main.1833f958.chunk.css.map": "/react-XIStore/static/css/main.1833f958.chunk.css.map",
     "static/js/2.61991284.chunk.js.LICENSE.txt": "/react-XIStore/static/js/2.61991284.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d1324cf2.js",
     "static/js/2.61991284.chunk.js",
-    "static/css/main.f4297ffb.chunk.css",
+    "static/css/main.1833f958.chunk.css",
     "static/js/main.d9b4c867.chunk.js"
   ]
 }
