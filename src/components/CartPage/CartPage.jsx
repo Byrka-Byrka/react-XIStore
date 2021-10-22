@@ -71,7 +71,7 @@ export function CartPage() {
                     </div>
                     <div className='cart-ordering'>
                         <div className='cart-ordering__info'>
-                        <div className='cart-ordering__items'>{`${allProductsAmount}items worth:`}</div>
+                        <div className='cart-ordering__items'>{`${allProductsAmount} items worth:`}</div>
                         <div className='cart-ordering__price'>{`${allProductsPrice}$`}</div>
                         </div>
                         <Button eventCallback={activatePopup} className='checkout_button' value='checkout' />
