@@ -76,7 +76,7 @@ export function ItemPage() {
                             }
                         })}
                     </div>
-                    {isUserAuthorized && isUserAdmin ? <Link to= {`${path}/Edit`}><Button value='Edit' eventCallback={handleSetProductToEdit}/></Link> : isUserAuthorized && product.colors.find(item => item.color === chosenColor).amount > 0 ? <Button className='itemPage__button' eventCallback={handleAddProductToCart} value='Add to cart' /> : isUserAuthorized && product.colors.find(item => item.color === chosenColor).amount <= 0 ? <div className='itemPage_soldInfo'>sold out</div> : <Button eventCallback={()=>dispatch(singInActivate())} value='Sing in'/>}
+                    {isUserAuthorized && isUserAdmin ? <Link to= {`${path}/Edit`}><Button value='Edit' eventCallback={handleSetProductToEdit}/></Link> : isUserAuthorized && product.colors.find(item => item.color === chosenColor).amount > 0 ? <Button className='itemPage__button' eventCallback={handleAddProductToCart} value='Add to cart' /> : isUserAuthorized && product.colors.find(item => item.color === chosenColor).amount <= 0 ? <div className='itemPage_soldInfo'>sold out</div> : <Button eventCallback={()=>dispatch(singInActivate())} value='Sign in'/>}
                 </div>
             </div>
             <h2 className='itemPage__header'>Description</h2>
